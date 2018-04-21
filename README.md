@@ -1,7 +1,7 @@
 Lasercuter Einweisung
 =====================
 
-Einweisung des [FAU FabLab](https://fablab.fau.de) für den Lasercuter [Cameo Zing 6030](https://fablab.fau.de/tool/lasercutter).
+Einweisung des Smartlab für den Lasercuter [Cameo Zing 6030](https://fablab.fau.de/tool/lasercutter).
 
 Die neueste Version gibt es hier zum Download als PDF:
 * [Einweisung](https://brain.fablab.fau.de/build/lasercutter-einweisung/Einweisung_Lasercutter.pdf)
