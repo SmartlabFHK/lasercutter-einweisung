@@ -5,64 +5,40 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-%\newcommand{\basedir}{fablab-document}
+\newcommand{\basedir}{fablab-document}
+%\documentclass{\basedir/fablab-document}
 
-\documentclass[a4paper,							% alle weiteren Papierformat einstellbar
-%landscape,						% Querformat
-%10pt,								% Schriftgröße (12pt, 11pt (Standard))
-%12pt,
-fontsize=14pt,
-%BCOR1cm,							% Bindekorrektur, bspw. 1 cm
-%DIVcalc,							% fährt die Satzspiegelberechnung neu aus
-%											  s. scrguide 2.4
-%oneside,							% einseitiges Layout
-%twocolumn,						% zweispaltiger Satz
-%openany,							% Kapitel kännen auch auf linken Seiten beginnen
-%halfparskip*,				% Absatzformatierung s. scrguide 3.1
-%headsepline,					% Trennline zum Seitenkopf	
-%footsepline,					% Trennline zum Seitenfuä
-%notitlepage,					% in-page-Titel, keine eigene Titelseite
-%chapterprefix,				% vor Kapiteläberschrift wird 'Kapitel Nummer' gesetzt
-%appendixprefix,				% Anhang wird 'Anhang' vor die äberschrift gesetzt 
-%normalheadings,			% äberschriften etwas kleiner (smallheadings)
-idxtotoc,						% Index im Inhaltsverzeichnis
-%liststotoc,					% Abb.- und Tab.verzeichnis im Inhalt
-%bibtotoc,						% Literaturverzeichnis im Inhalt
-%leqno,								% Nummerierung von Gleichungen links
-%fleqn,								% Ausgabe von Gleichungen linksbändig
-%draft								% äberlangen Zeilen in Ausgabe gekennzeichnet
-]{scrbook}
-\usepackage{fancybox} %ovale Boxen für Knöpfe - nicht mehr benötigt
+% \usepackage{fancybox} %ovale Boxen für Knöpfe - nicht mehr benötigt
 \usepackage{amssymb} % Symbole für Knöpfe
 \usepackage{subfigure,caption}
 
-%\usetikzlibrary{shapes,arrows} % für das flowchart
+\usetikzlibrary{shapes,arrows} % für das flowchart
 
 \usepackage{marvosym} % für Briefumschlag-Symbol
 \usepackage{eurosym}
 \usepackage{tabularx} % Tabellen mit bestimmtem Breitenverhältnis der Spalten
 \usepackage{multirow} % Tabellen Zellen die sich über mehrere Zeilen ausdehnen
 \usepackage{wrapfig} % Textumlauf um Bilder
-%\renewcommand{\texteuro}{\euro}
+\renewcommand{\texteuro}{\euro}
 
 \linespread{1.2}
 
 \date{2015}
 \author{Alex, arw, Max, Patrick, Philipp, Tilman, u.a.}
-%\fancyfoot[L]{lasercutter@fablab.fau.de}
+\fancyfoot[L]{lasercutter@fablab.fau.de}
 \title{Einweisung Lasercutter}
 
-%\tikzstyle{laserknopf} = [anchor=base, draw=black, fill=gray!10, rectangle, rounded corners, inner sep=2pt, outer sep = 3pt]
-%\tikzstyle{lueftungsknopf} = [anchor=base, color=white, draw=black, fill=gray, rectangle, rounded corners, inner sep=2pt, outer sep = 3pt]
+\tikzstyle{laserknopf} = [anchor=base, draw=black, fill=gray!10, rectangle, rounded corners, inner sep=2pt, outer sep = 3pt]
+\tikzstyle{lueftungsknopf} = [anchor=base, color=white, draw=black, fill=gray, rectangle, rounded corners, inner sep=2pt, outer sep = 3pt]
 
 % styles für das Flowchart
-%\tikzstyle{decision} = [diamond, draw, fill=blue!20,
-%    text width=4.5em, text badly centered, node distance=3cm, inner sep=0pt]
-%\tikzstyle{block} = [rectangle, draw, fill=blue!20,
-%    text width=5em, text centered, rounded corners, minimum height=4em]
-%\tikzstyle{line} = [draw, very thick, color=black!50, -latex']
-%\tikzstyle{cloud} = [draw, ellipse,fill=red!20, node distance=3cm,
-%    minimum height=2em]
+\tikzstyle{decision} = [diamond, draw, fill=blue!20,
+    text width=4.5em, text badly centered, node distance=3cm, inner sep=0pt]
+\tikzstyle{block} = [rectangle, draw, fill=blue!20,
+    text width=5em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{line} = [draw, very thick, color=black!50, -latex']
+\tikzstyle{cloud} = [draw, ellipse,fill=red!20, node distance=3cm,
+    minimum height=2em]
 
 % Knöpfe für Laser und Fernbedienung
 \newcommand{\knopf}[2]{
@@ -74,7 +50,7 @@ idxtotoc,						% Index im Inhaltsverzeichnis
 }
 
 
-%\renewcommand{\todo}[1]{\textbf{\color{red}{TODO: #1}}}
+\renewcommand{\todo}[1]{\textbf{\color{red}{TODO: #1}}}
 
 
 %\newcommand{\laserKnopf}[1]{\,\Ovalbox{\fontsize{9pt}{9pt}\selectfont \textbf{#1}}\ }
@@ -125,8 +101,8 @@ Den Inhalt dieser drei Abschnitte musst du wissen, alles andere kannst du bei Be
  \item Lasercutter nur unter ständiger Beobachtung betreiben! Solange der Laser aktiv ist, muss immer eine Person \emph{direkt} beim Lasercutter sein. Für vollständig unbrennbare Materialien (Glas, nicht lackierte Metallteile) gibt es eine Ausnahme, wenn vorher alle brennbaren Reste aus dem Schneidetisch entleert wurden.
  \item Alle Arbeiten erfolgen auf eigenes Risiko, auch wenn dein schickes Handy beim Gravieren kaputtgeht.
  \item Die grün markierten Rändelschrauben am Schneidetisch dürfen von Hand gedreht werden, ansonsten nichts verstellen. % Betätigen der grünen Schrauben ist nötig, um den Schneidetisch zu reinigen! Deshalb kann man es nicht ganz verbieten.
- \item Im Brandfall nur mit CO2-Löscher, niemals mit Pulver-, Schaum- oder Wasserlöscher löschen (Verschmutzung, Stromschlaggefahr)! Der Feuerlöscher steht direkt neben dem Lasercutter.
- \item Es gibt keinen Not-Aus-Schalter! \textit{laserStop}  fährt die aktuelle Linie noch zu Ende. Sofortiges Abschalten des Lasercutters geht nur über den Kippschalter rechts unten am Gerät.
+ \item Im Brandfall nur mit CO\subscript{2}-Löscher, niemals mit Pulver-, Schaum- oder Wasserlöscher löschen (Verschmutzung, Stromschlaggefahr)! Der Feuerlöscher steht direkt neben dem Lasercutter.
+ \item Es gibt keinen Not-Aus-Schalter! \laserStop  fährt die aktuelle Linie noch zu Ende. Sofortiges Abschalten des Lasercutters geht nur über den Kippschalter rechts unten am Gerät.
 \end{itemize}
 
 % Messing ist nicht verboten, auch wenn es nicht geht, denn dieser Laser hat einen Schutz gegen Reflektionen (Aussage des Technikers, auf explizite Frage, was passiert, wenn ich den Strahl 100% spiegle und in den Laser zurückwerfe)
@@ -134,7 +110,7 @@ Den Inhalt dieser drei Abschnitte musst du wissen, alles andere kannst du bei Be
 \subsection{Bei kleineren Flammen}
 Eine \emph{kleinere} Flamme am Laserpunkt und leichter Geruch kann manchmal auftreten:
 \begin{itemize}
- \item Zum Pausieren \textit{laserStop} drücken: Druckauftrag wird \emph{nach} dem Ende der aktuellen Linie pausiert. Bis zum Anhalten kann es unter Umständen lange dauern!
+ \item Zum Pausieren \laserStop drücken: Druckauftrag wird \emph{nach} dem Ende der aktuellen Linie pausiert. Bis zum Anhalten kann es unter Umständen lange dauern!
  \item Sicherstellen, dass die Absaugung (auch die Decken-Absaugung) angeschaltet ist und Air Assist (Schalter unter dem Gehäuse rechts) an ist.
  \item Bei manchem Material lässt es sich nicht vermeiden und dann ist es auch nicht weiter schlimm.
 \end{itemize}
@@ -144,7 +120,7 @@ Bei \emph{größeren} Flammen oder starker Rauchentwicklung muss das Lasern \emp
 \begin{itemize}
  \item \textbf{Deckel leicht öffnen} (Laser wird ausgeschaltet, der Antrieb fährt jedoch weiter).
  \item \textbf{Betreuer rufen}
- \item Letzer Ausweg ist das Löschen mit dem CO2-Löscher in kurzen Sprühstößen. Ein Feuerlöscher befindet sich direkt beim Lasercutter, sowie am Durchgang zur Elektrowerkstatt.
+ \item Letzer Ausweg ist das Löschen mit dem CO\subscript{2}-Löscher in kurzen Sprühstößen. Ein Feuerlöscher befindet sich direkt beim Lasercutter, sowie am Durchgang zur Elektrowerkstatt.
  \item Bei weiterer Eskalation die Feuerwehr rufen, anwesende Personen warnen und den Raum verlassen (Erstickungsgefahr)
 \end{itemize}
 
@@ -166,7 +142,7 @@ Wenn ein Material nicht zweifelsfrei erlaubt ist, frage unbedingt nach! Viele Ku
 \itemCheck dünne Lackschichten auf Metall (außer Teflonbeschichtung)
 \itemCheck erlaubte Kunststoffe: Acrylglas (PMMA), PET (Overheadfolie, Bayer Vivak), Moosgummi (EVA-Schaum)
 \itemCheck Holz, Pappe, Papier und Ähnliches (HDF, Butterkeks ohne Schokolade, Brezen, ...)
-\itemCheck PE Polyethylen: Schaumstoffe gehen gut, Platten schlecht laserbar aber trotzdem erlaubt
+\itemCheck schlecht laserbar aber trotzdem erlaubt: PE Polyethylen
 \itemCheck PS Polystyrol bis 1mm Dicke
 \itemCheck PC Polycarbonat bis 1mm Dicke
 \itemCheck spezieller laserbarer Stempelgummi aus dem FabLab
@@ -431,9 +407,8 @@ In Härtefällen, z.B. wenn ein kompletter Auftrag fehlgeschlagen ist, können v
 \begin{itemize}
 \label{linsenreinigung}
  \item Auf den Schneidetisch etwas weiches legen, z.B. ein Stück altes Sweatshirt oder eine ausgebreitete Zeitung.
- \item ggf. Schneidetisch runterfahren
  \item Linse herausschrauben, entnehmen und mit der Gewinde-Seite nach unten auf den Tisch legen.
- \item 3-5 Tropfen Linsenreiniger auf Wattestäbchen aufbringen. Nur den originalen Reiniger verwenden, dieser ist 25 Prozent Isopropanol in demineralisiertem Wasser gelöst.
+ \item 3-5 Tropfen Linsenreiniger (nur den originalen verwenden!) auf Wattestäbchen aufbringen.
  \item vom Mittelpunkt nach außen wischen, dabei das Stäbchen immer ganz leicht weiterdrehen, niemals zurückdrehen! Dreck darf nicht in die Beschichtung gekratzt werden!
  \item Dies wiederholen, bis die Linse sauber aussieht. Dabei jedes mal eine frische Seite des Wattestäbchens und neuen Linsenreiniger verwenden!
  \item Nun ein letztes mal im Zickzack die ganze Fläche abwischen.
@@ -501,7 +476,6 @@ Zur ausführlichen Wartung gehören die folgenden Punkte:
 \item Wartung der Z-Mechanik
 \item Warten der Filtereinheit
 \item Zerlegen des Absaugkasten und Ausblasen des Saugermotors
-\item weiteres siehe Wartungsliste
 \end{itemize}
 
 \subsection{Lasermatch einstellen}
